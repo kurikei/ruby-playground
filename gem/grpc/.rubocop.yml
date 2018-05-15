@@ -1,6 +1,14 @@
+inherit_from: .rubocop_todo.yml
+
 AllCops:
   Exclude:
     - '**/*_pb.rb'
+
+Metrics/LineLength:
+  Max: 100
+
+Style/Documentation:
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
