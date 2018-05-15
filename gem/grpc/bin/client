@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+lib_dir = File.join(__dir__, '../lib')
+$LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
+
+require 'grpc'
+require 'helloworld_services_pb'
+
+def main
+  stub = Helloworld::Greeter::Stub.new('localhost:50051', :this_channel_is_insecure)
+  user = !ARGV.empty? ? ARGV[0] : 'world'
+  hello_req = Helloworld::HelloRequest.new(name: user)
+  message = stub.say_hello(hello_req).message
+  p "Greeting: #{message}"
+end
+
+main

@@ -1,0 +1,6 @@
+AllCops:
+  Exclude:
+    - '**/*_pb.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
