@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+gem 'grpc'
+gem 'grpc-tools'
+
+group 'development' do
+  gem 'rubocop', require: false
+end
