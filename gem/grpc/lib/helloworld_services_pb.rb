@@ -25,7 +25,6 @@ module Helloworld
   module Greeter
     # The greeting service definition.
     class Service
-
       include GRPC::GenericService
 
       self.marshal_class_method = :encode
