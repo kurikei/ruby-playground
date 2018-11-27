@@ -1,8 +1,0 @@
-source 'https://rubygems.org'
-gem 'dotenv'
-gem 'google-cloud-bigquery'
-
-group 'development' do
-  gem 'rubocop', require: false
-end
-

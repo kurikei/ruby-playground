@@ -1,3 +1,0 @@
-source :rubygems
-gem 'dotenv'
-gem 'google-cloud-vision'
