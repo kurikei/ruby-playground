@@ -18,8 +18,6 @@ require 'benchmark/ips'
 #                    with 95.0% confidence
 
 Benchmark.ips do |x|
-  x.config(stats: :bootstrap, confidence: 95)
-
   x.report('flat_map')    { 20.times.flat_map { |i| [i] } }
   x.report('map.flatten') { 20.times.map { |i| [i] }.flatten }
 

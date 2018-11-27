@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'benchmark-ips'
 gem 'dotenv'
 gem 'google-cloud-bigquery'
 gem 'google-cloud-vision'

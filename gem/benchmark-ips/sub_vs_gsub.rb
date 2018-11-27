@@ -18,8 +18,6 @@ require 'benchmark/ips'
 
 string = 'google_cloud_platform'
 Benchmark.ips do |x|
-  x.config(stats: :bootstrap, confidence: 95)
-
   x.report('sub')    { string.sub(/\Agoogle_/, '') }
   x.report('gsub')   { string.gsub(/\Agoogle_/, '') }
 
